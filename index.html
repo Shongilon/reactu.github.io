@@ -26,6 +26,7 @@
             box-sizing: border-box;
             position: relative;
             z-index: 1;
+            padding-top: calc(50px + env(safe-area-inset-top, 0px));
         }
         .logo {
             width: 300px;
@@ -114,6 +115,8 @@
             font-weight: 700;
             z-index: 1000;
             box-shadow: 0 0 20px rgba(0,255,255,0.3);
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 15px); /* Adjust for notches */
         }
         .stealth-text {
             font-size: 1rem;
@@ -148,8 +151,12 @@
         .dot.yellow { background-color: #FFFF00; }
         .dot.green { background-color: #008000; }
         @media (max-width: 768px) {
+            .stealth-banner {
+                padding-top: max(env(safe-area-inset-top), 20px);
+                padding-bottom: 15px;
+            }
             .container {
-                padding-top: 100px; /* Increased top padding to account for the fixed header */
+                padding-top: calc(80px + env(safe-area-inset-top, 0px));
             }
             .logo {
                 width: 200px; /* Slightly smaller logo for mobile */
