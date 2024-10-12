@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reactu.io | A New Language of Connection</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            height: 100%;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 50px 20px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+        .logo {
+            width: 300px;
+            margin-bottom: 50px;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+        }
+        .tagline {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            max-width: 800px;
+            margin-bottom: 2rem;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+        .description {
+            font-size: 1.3rem;
+            text-align: center;
+            max-width: 800px;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+        .cta {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background: linear-gradient(45deg, #0000FF, #00FFFF);
+            color: #ffffff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 0 20px rgba(0,255,255,0.5);
+        }
+        .cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px rgba(0,255,255,0.8);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .feature {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: rgba(255,255,255,0.1);
+            box-shadow: 0 0 20px rgba(255,255,255,0.1);
+        }
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(255,255,255,0.2);
+        }
+        .feature h3 {
+            color: #00FFFF;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .feature p {
+            color: #cccccc;
+        }
+        .dot-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .dot {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 10px;
+            box-shadow: 0 0 10px currentColor;
+        }
+        .dot.blue { background-color: #0000FF; }
+        .dot.red { background-color: #FF0000; }
+        .dot.yellow { background-color: #FFFF00; }
+        .dot.green { background-color: #008000; }
+        .stealth-banner {
+            background: rgba(0,0,0,0.8);
+            color: #ffffff;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-weight: 700;
+            z-index: 1000;
+            box-shadow: 0 0 20px rgba(0,255,255,0.3);
+        }
+        .stealth-text {
+            font-size: 1rem;
+            color: #00FFFF;
+            margin-top: 20px;
+            font-style: italic;
+            font-weight: 600;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="stealth-banner">🔒 Shhh... We're reimagining connection. Something extraordinary is coming.</div>
+    <div class="container">
+        <img src="/api/placeholder/300/100" alt="Reactu.io Logo" class="logo">
+        <h1 class="tagline">Imagine a New Language of Connection</h1>
+        <p class="description">At Reactu.io, we imagine a future where Intelligent Experiences create a new language, seamlessly bridging human emotions and feelings with technology. Our innovations are redefining how we connect, communicate, and care—starting in healthcare and beyond.</p>
+        <button class="cta">Join the Innovation</button>
+        <p class="stealth-text">Be part of the future where technology speaks the language of human emotion.</p>
+        
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>Emotional Intelligence</h3>
+                <p>Discover technology that fluently speaks the language of human emotions, transforming healthcare interactions.</p>
+            </div>
+            <div class="feature">
+                <h3>Innovative Communication</h3>
+                <p>Experience a new paradigm of connection that bridges the gap between human feelings and digital interfaces.</p>
+            </div>
+            <div class="feature">
+                <h3>Healthcare Revolution</h3>
+                <p>Witness the dawn of empathetic technology that enhances patient care and medical communication.</p>
+            </div>
+        </div>
+        
+        <div class="dot-container">
+            <span class="dot blue"></span>
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
+                size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 0.1, sync: false } },
+                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 1, direction: "none", random: true, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+
+        document.querySelector('.cta').addEventListener('click', function() {
+            alert('Thank you for your interest in shaping the future of connection! We\'ll keep you updated on Reactu.io\'s groundbreaking developments in healthcare and beyond.');
+        });
+    </script>
+</body>
+</html>
