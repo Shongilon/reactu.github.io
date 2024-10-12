@@ -26,7 +26,7 @@
             box-sizing: border-box;
             position: relative;
             z-index: 1;
-            padding-top: calc(50px + env(safe-area-inset-top, 0px));
+            padding-top: calc(60px + env(safe-area-inset-top, 0px));
         }
         .logo {
             width: 300px;
@@ -106,7 +106,6 @@
         .stealth-banner {
             background: rgba(0,0,0,0.8);
             color: #ffffff;
-            padding: 15px 20px;
             position: fixed;
             top: 0;
             left: 0;
@@ -116,7 +115,11 @@
             z-index: 1000;
             box-shadow: 0 0 20px rgba(0,255,255,0.3);
             box-sizing: border-box;
-            padding-top: env(safe-area-inset-top, 15px); /* Adjust for notches */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60px; /* Set a minimum height */
+            padding: env(safe-area-inset-top, 15px) 20px 15px; /* Adjust top padding for notches */
         }
         .stealth-text {
             font-size: 1rem;
@@ -152,11 +155,11 @@
         .dot.green { background-color: #008000; }
         @media (max-width: 768px) {
             .stealth-banner {
-                padding-top: max(env(safe-area-inset-top), 20px);
-                padding-bottom: 15px;
+                min-height: 70px; /* Slightly taller on mobile */
+                padding: max(env(safe-area-inset-top), 20px) 20px 20px;
             }
             .container {
-                padding-top: calc(80px + env(safe-area-inset-top, 0px));
+                padding-top: calc(70px + env(safe-area-inset-top, 0px));
             }
             .logo {
                 width: 200px; /* Slightly smaller logo for mobile */
