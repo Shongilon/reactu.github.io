@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Enhanced SEO Meta Tags -->
-    <meta name="description" content="Reactu.io develops groundbreaking emotional AI technology that bridges human emotions and technology, transforming healthcare communication and patient experience.">
-    <meta name="keywords" content="AI That Feels You, emotional intelligence technology, healthcare AI, emotion recognition, patient communication, healthcare innovation, emotional analytics">
-    <title>Reactu.io | AI That Feels You - Emotional Intelligence Technology</title>
+    <meta name="description" content="Reactu.io - AI That Feels You. Pioneering technology that gives emotion a voice, translating physiological signals into real-time emotional expression.">
+    <meta name="keywords" content="AI That Feels You, giving emotion a voice, emotional intelligence technology, healthcare AI, emotion recognition, patient communication">
+    <title>Reactu.io | AI That Feels You - Giving Emotion a Voice</title>
     <link rel="canonical" href="https://reactu.io/">
     <meta name="robots" content="index, follow">
     
@@ -15,14 +15,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://reactu.io/">
     <meta property="og:title" content="Reactu.io | AI That Feels You">
-    <meta property="og:description" content="Pioneering technology that bridges human emotions and technology, transforming healthcare communication.">
+    <meta property="og:description" content="Pioneering technology that bridges human emotions and technology, giving emotion a voice.">
     <meta property="og:image" content="https://reactu.io/og-image.jpg">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://reactu.io/">
     <meta name="twitter:title" content="Reactu.io | AI That Feels You">
-    <meta name="twitter:description" content="Pioneering technology that bridges human emotions and technology, transforming healthcare communication.">
+    <meta name="twitter:description" content="Pioneering technology that bridges human emotions and technology, giving emotion a voice.">
     <meta name="twitter:image" content="https://reactu.io/twitter-image.jpg">
 
     <!-- Preconnect to External Resources -->
@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     <!-- Font Loading -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <!-- Critical CSS -->
     <style>
@@ -54,7 +54,7 @@
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Source Sans Pro', sans-serif;
             background-color: var(--background);
             color: var(--text);
             height: 100%;
@@ -125,6 +125,29 @@
             width: 300px;
             margin-bottom: 50px;
             filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 15px rgba(255,255,255,0.7));
+        }
+        
+        /* Problem Statement */
+        .problem-statement {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            padding: 2rem;
+            background: rgba(46,15,90,0.1);
+            border-radius: 15px;
+            border-left: 4px solid var(--bright-pink);
+        }
+        
+        .problem-statement p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin: 0;
         }
         
         /* Enhanced title styling */
@@ -202,7 +225,7 @@
             box-shadow: 0 0 20px rgba(230,0,126,0.5);
             text-decoration: none;
             display: inline-block;
-            font-weight: 500;
+            font-weight: 600;
         }
         
         .cta:hover {
@@ -329,109 +352,6 @@
         .dot.yellow { background-color: var(--google-yellow); }
         .dot.green { background-color: var(--google-green); }
         
-
-        .step-number {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--bright-pink);
-            color: white;
-            text-align: center;
-            line-height: 40px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        
-        /* Partners Section */
-        .partners-section {
-            text-align: center;
-            padding: 2rem 0;
-        }
-        
-        .partners-section h2 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: var(--text);
-            font-weight: 600;
-        }
-        
-        .partners-logos {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-top: 30px;
-        }
-        
-        .partner-logo {
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-            filter: grayscale(1);
-            max-width: 150px;
-            height: auto;
-        }
-        
-        .partner-logo:hover {
-            opacity: 1;
-            filter: grayscale(0);
-        }
-        
-        /* Email signup */
-        .signup-section {
-            width: 100%;
-            max-width: 600px;
-            margin: 3rem auto;
-            text-align: center;
-        }
-        
-        .process-diagram {
-            display: flex;
-            justify-content: space-between;
-            margin: 3rem 0;
-            position: relative;
-            padding: 0 20px;
-        }
-        
-        .process-diagram::before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 50px;
-            right: 50px;
-            height: 2px;
-            background: linear-gradient(90deg, var(--bright-teal), var(--bright-pink));
-            z-index: 0;
-        }
-        
-        .process-step {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            flex: 1;
-            max-width: 200px;
-        }
-        
-        .process-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: var(--deep-purple);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
-            font-size: 2rem;
-            color: white;
-            position: relative;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-        
-        .process-step p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        
         /* Footer */
         footer {
             width: 100%;
@@ -508,21 +428,9 @@
             .description {
                 font-size: 1.1rem;
             }
-            .process-diagram {
-                flex-direction: column;
-                align-items: center;
-                gap: 30px;
-            }
-            .process-diagram::before {
-                height: 80%;
-                width: 2px;
-                top: 50px;
-                left: 50%;
-                right: auto;
-                transform: translateX(-50%);
-            }
-            .approach-grid {
-                grid-template-columns: 1fr;
+            .problem-statement {
+                padding: 1.5rem;
+                font-size: 1rem;
             }
         }
         
@@ -555,7 +463,7 @@
       "name": "Reactu.io",
       "url": "https://reactu.io",
       "logo": "https://reactu.io/logo.png",
-      "description": "Pioneering AI technology that bridges human emotions and technology, transforming healthcare communication.",
+      "description": "Pioneering AI technology that bridges human emotions and technology, giving emotion a voice.",
       "keywords": "AI, emotional intelligence, healthcare technology, patient communication",
       "sameAs": [
         "https://www.linkedin.com/company/reactu"
@@ -603,12 +511,16 @@
         </div>
         
         <!-- Added SEO Optimized Subtitle -->
-        <h2 class="subtitle fade-in-up">Pioneering Emotional Intelligence Technology in Healthcare</h2>
+        <h2 class="subtitle fade-in-up">Giving Emotion a Voice</h2>
+        
+        <!-- Problem Statement -->
+        <div class="problem-statement fade-in-up">
+            <p>Imagine being fully aware, trapped in a body that cannot express even the simplest emotions. Millions of people live this reality daily. Reactu.io is pioneering a breakthrough solution that translates physiological signals into real-time emotional expression.</p>
+        </div>
         
         <p class="description fade-in-up">
-            At Reactu.io, we're pioneering a future where technology understands and expresses human emotions. 
-            Our breakthrough AI creates a new language of connection, bridging feelings with technology—transforming 
-            healthcare and human experience.
+            At Reactu.io, we're creating a new language of connection, seamlessly bridging human emotions with technology. 
+            Our innovations are redefining how we connect, communicate, and care.
         </p>
         
         <div class="cta-container fade-in-up">
@@ -708,16 +620,5 @@
             });
         });
     </script>
-    
-    <!-- Google Analytics (commented out until you're ready to implement) -->
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
-    -->
 </body>
 </html>
