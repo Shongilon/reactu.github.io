@@ -3,12 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Reactu.io - AI That Fills You. Bridging human emotions and technology to create a new language of connection in healthcare.">
-    <meta name="keywords" content="AI That Fills You, emotional technology, healthcare innovation, assistive technology, human-computer interface, emotion AI">
-    <title>Reactu.io | AI That Fills You</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="description" content="Reactu.io develops groundbreaking emotional AI technology that bridges human emotions and technology, transforming healthcare communication and patient experience.">
+    <meta name="keywords" content="AI That Feels You, emotional intelligence technology, healthcare AI, emotion recognition, patient communication, healthcare innovation, emotional analytics">
+    <title>Reactu.io | AI That Feels You - Emotional Intelligence Technology</title>
+    <link rel="canonical" href="https://reactu.io/">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reactu.io/">
+    <meta property="og:title" content="Reactu.io | AI That Feels You">
+    <meta property="og:description" content="Pioneering technology that bridges human emotions and technology, transforming healthcare communication.">
+    <meta property="og:image" content="https://reactu.io/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://reactu.io/">
+    <meta name="twitter:title" content="Reactu.io | AI That Feels You">
+    <meta name="twitter:description" content="Pioneering technology that bridges human emotions and technology, transforming healthcare communication.">
+    <meta name="twitter:image" content="https://reactu.io/twitter-image.jpg">
 
+    <!-- Preconnect to External Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Font Loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS -->
+    <style>
         :root {
             --deep-purple: #2E0F5A;
             --bright-pink: #E6007E;
@@ -34,7 +60,38 @@
             height: 100%;
             overflow-x: hidden;
             font-weight: 300;
+            line-height: 1.6;
         }
+        
+        /* Accessibility focus styles */
+        *:focus {
+            outline: 3px solid var(--bright-teal);
+            outline-offset: 2px;
+        }
+        
+        .skip-to-content {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            z-index: 9999;
+            background: var(--deep-purple);
+            color: white;
+            padding: 1rem;
+            border-radius: 0 0 5px 5px;
+        }
+        
+        .skip-to-content:focus {
+            left: 0;
+            top: 0;
+            width: auto;
+            height: auto;
+            outline: none;
+        }
+        
+        /* Content Container */
         .container {
             display: flex;
             flex-direction: column;
@@ -47,6 +104,23 @@
             z-index: 1;
             padding-top: calc(60px + env(safe-area-inset-top, 0px));
         }
+        
+        /* Section styles */
+        section {
+            width: 100%;
+            max-width: 1000px;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .section-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(230,0,126,0.5), transparent);
+            margin: 4rem 0;
+        }
+        
+        /* Logo */
         .logo {
             width: 300px;
             margin-bottom: 50px;
@@ -88,6 +162,14 @@
             z-index: 1;
         }
         
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-align: center;
+            margin: 1rem 0 2rem;
+            color: var(--bright-teal);
+        }
+        
         .description {
             font-size: 1.3rem;
             text-align: center;
@@ -97,12 +179,15 @@
             color: #cccccc;
             font-weight: 300;
         }
+        
+        /* CTA Button */
         .cta-container {
             display: flex;
             justify-content: center;
             width: 100%;
             margin-bottom: 20px;
         }
+        
         .cta {
             padding: 15px 30px;
             font-size: 1.1rem;
@@ -119,10 +204,26 @@
             display: inline-block;
             font-weight: 500;
         }
+        
         .cta:hover {
             transform: translateY(-3px);
             box-shadow: 0 0 30px rgba(230,0,126,0.8);
         }
+        
+        .cta:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(230,0,126,0.5), 0 0 0 1px #fff;
+        }
+        
+        .stealth-text {
+            font-size: 1rem;
+            color: var(--bright-teal);
+            margin-top: 10px;
+            font-weight: 400;
+            text-align: center;
+        }
+        
+        /* Feature Grid */
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -131,28 +232,53 @@
             width: 100%;
             max-width: 1000px;
         }
+        
         .feature {
             text-align: center;
             padding: 30px;
             border-radius: 15px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
             background: rgba(46,15,90,0.2);
             box-shadow: 0 0 20px rgba(46,15,90,0.3);
+            position: relative;
+            overflow: hidden;
         }
+        
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--deep-purple), var(--bright-pink));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
         .feature:hover {
             transform: translateY(-10px);
             box-shadow: 0 0 30px rgba(46,15,90,0.5);
+            background: rgba(46,15,90,0.25);
         }
+        
+        .feature:hover::before {
+            opacity: 1;
+        }
+        
         .feature h3 {
             color: var(--bright-teal);
             margin-bottom: 15px;
             font-size: 1.5rem;
             font-weight: 600;
         }
+        
         .feature p {
             color: #cccccc;
             font-weight: 300;
         }
+        
+        /* Top Banner */
         .stealth-banner {
             background: rgba(0,0,0,0.8);
             color: #ffffff;
@@ -171,13 +297,8 @@
             min-height: 60px;
             padding: env(safe-area-inset-top, 15px) 20px 15px;
         }
-        .stealth-text {
-            font-size: 1rem;
-            color: var(--bright-teal);
-            margin-top: 10px;
-            font-weight: 400;
-            text-align: center;
-        }
+        
+        /* Particles Background */
         #particles-js {
             position: absolute;
             width: 100%;
@@ -186,11 +307,14 @@
             left: 0;
             z-index: 0;
         }
+        
+        /* Colored Dots */
         .dot-container {
             display: flex;
             justify-content: center;
             margin-top: 50px;
         }
+        
         .dot {
             height: 15px;
             width: 15px;
@@ -199,36 +323,125 @@
             margin: 0 10px;
             box-shadow: 0 0 10px currentColor;
         }
+        
         .dot.blue { background-color: var(--google-blue); }
         .dot.red { background-color: var(--google-red); }
         .dot.yellow { background-color: var(--google-yellow); }
         .dot.green { background-color: var(--google-green); }
         
-        .particles-js-canvas-el {
-            filter: hue-rotate(280deg);
+
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bright-pink);
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 600;
+            margin-bottom: 15px;
         }
         
-        @media (max-width: 768px) {
-            .stealth-banner {
-                min-height: 70px;
-                padding: max(env(safe-area-inset-top), 20px) 20px 20px;
-            }
-            .container {
-                padding-top: calc(70px + env(safe-area-inset-top, 0px));
-            }
-            .logo {
-                width: 200px;
-                margin-top: 20px;
-            }
-            .tagline {
-                font-size: 2.8rem;
-            }
-            .description {
-                font-size: 1.1rem;
-            }
+        /* Partners Section */
+        .partners-section {
+            text-align: center;
+            padding: 2rem 0;
         }
         
-        /* Animation for title glow */
+        .partners-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text);
+            font-weight: 600;
+        }
+        
+        .partners-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .partner-logo {
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            filter: grayscale(1);
+            max-width: 150px;
+            height: auto;
+        }
+        
+        .partner-logo:hover {
+            opacity: 1;
+            filter: grayscale(0);
+        }
+        
+        /* Email signup */
+        .signup-section {
+            width: 100%;
+            max-width: 600px;
+            margin: 3rem auto;
+            text-align: center;
+        }
+        
+        .process-diagram {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0;
+            position: relative;
+            padding: 0 20px;
+        }
+        
+        .process-diagram::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            right: 50px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--bright-teal), var(--bright-pink));
+            z-index: 0;
+        }
+        
+        .process-step {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            flex: 1;
+            max-width: 200px;
+        }
+        
+        .process-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--deep-purple);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 2rem;
+            color: white;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .process-step p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 3rem 0 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
         @keyframes titlePulse {
             0% {
                 text-shadow: 
@@ -253,51 +466,198 @@
         .tagline {
             animation: titlePulse 3s infinite ease-in-out;
         }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            opacity: 0;
+        }
+        
+        .fade-in-up.active {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .stealth-banner {
+                min-height: 70px;
+                padding: max(env(safe-area-inset-top), 20px) 20px 20px;
+            }
+            .container {
+                padding-top: calc(70px + env(safe-area-inset-top, 0px));
+            }
+            .logo {
+                width: 200px;
+                margin-top: 20px;
+            }
+            .tagline {
+                font-size: 2.8rem;
+            }
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            .description {
+                font-size: 1.1rem;
+            }
+            .process-diagram {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+            .process-diagram::before {
+                height: 80%;
+                width: 2px;
+                top: 50px;
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%);
+            }
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Dark mode optimizations */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #ffffff;
+                --text-secondary: #cccccc;
+            }
+        }
+        
+        /* High contrast mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --text: #ffffff;
+                --text-secondary: #f0f0f0;
+            }
+            .feature {
+                border: 1px solid white;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Reactu.io",
+      "url": "https://reactu.io",
+      "logo": "https://reactu.io/logo.png",
+      "description": "Pioneering AI technology that bridges human emotions and technology, transforming healthcare communication.",
+      "keywords": "AI, emotional intelligence, healthcare technology, patient communication",
+      "sameAs": [
+        "https://www.linkedin.com/company/reactu"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "AI That Feels You",
+      "description": "Innovative technology that translates physiological signals into emotional expression",
+      "category": "Healthcare Technology",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/ComingSoon"
+      }
+    }
+    </script>
+    
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    
+    <!-- Background Effects -->
     <div id="particles-js"></div>
-    <div class="stealth-banner">🔒 Shhh... We're Reimagining Connection. Something Extraordinary Is Coming.</div>
-    <div class="container">
+    
+    <!-- Top Banner -->
+    <div class="stealth-banner" role="banner">
+        🔒 Shhh... We're Reimagining Connection. Something Extraordinary Is Coming.
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container" id="main-content">
         <img src="Reactu_Logo.png" alt="Reactu.io Logo" class="logo">
         
+        <!-- Enhanced Title -->
         <div class="tagline-container">
-            <div class="tagline-glow"></div>
-            <h1 class="tagline">AI That Fills You</h1>
+            <div class="tagline-glow" aria-hidden="true"></div>
+            <h1 class="tagline">AI That Feels You</h1>
         </div>
         
-        <p class="description">At Reactu.io, we're pioneering a future where technology understands and expresses human emotions. Our breakthrough AI creates a new language of connection, bridging feelings with technology—transforming healthcare and human experience.</p>
-        <div class="cta-container">
-            <a href="https://www.linkedin.com/company/reactu" target="_blank" class="cta">Follow Our Journey</a>
+        <!-- Added SEO Optimized Subtitle -->
+        <h2 class="subtitle fade-in-up">Pioneering Emotional Intelligence Technology in Healthcare</h2>
+        
+        <p class="description fade-in-up">
+            At Reactu.io, we're pioneering a future where technology understands and expresses human emotions. 
+            Our breakthrough AI creates a new language of connection, bridging feelings with technology—transforming 
+            healthcare and human experience.
+        </p>
+        
+        <div class="cta-container fade-in-up">
+            <a href="https://www.linkedin.com/company/reactu" target="_blank" rel="noopener" class="cta" aria-label="Follow Reactu.io on LinkedIn">Follow Our Journey</a>
         </div>
-        <p class="stealth-text">Be part of the revolution where technology speaks the language of human emotion.</p>
+        
+        <p class="stealth-text fade-in-up">Be part of the revolution where technology speaks the language of human emotion.</p>
 
-        <div class="feature-grid">
-            <div class="feature">
-                <h3>Emotional Intelligence</h3>
-                <p>Discover technology that fluently interprets and expresses human emotions, transforming patient-provider interactions in healthcare.</p>
+        <div class="section-divider" aria-hidden="true"></div>
+        
+        <!-- Features Section -->
+        <section class="features-section fade-in-up">
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>Emotional Intelligence</h3>
+                    <p>Discover technology that fluently interprets and expresses human emotions, transforming patient-provider interactions in healthcare.</p>
+                </div>
+                <div class="feature">
+                    <h3>Innovative Communication</h3>
+                    <p>Experience a new paradigm where emotional expression flows seamlessly between humans and technology, creating deeper connections.</p>
+                </div>
+                <div class="feature">
+                    <h3>Healthcare Transformation</h3>
+                    <p>Witness the emergence of empathetic technology that redefines patient care by bringing emotional intelligence to medical communication.</p>
+                </div>
             </div>
-            <div class="feature">
-                <h3>Innovative Communication</h3>
-                <p>Experience a new paradigm where emotional expression flows seamlessly between humans and technology, creating deeper connections.</p>
-            </div>
-            <div class="feature">
-                <h3>Healthcare Transformation</h3>
-                <p>Witness the emergence of empathetic technology that redefines patient care by bringing emotional intelligence to medical communication.</p>
-            </div>
-        </div>
-
+        </section>
+        
+        <div class="section-divider" aria-hidden="true"></div>
+        
+        <!-- Colored Dots -->
         <div class="dot-container">
-            <span class="dot blue"></span>
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
+            <span class="dot blue" aria-hidden="true"></span>
+            <span class="dot red" aria-hidden="true"></span>
+            <span class="dot yellow" aria-hidden="true"></span>
+            <span class="dot green" aria-hidden="true"></span>
         </div>
+        
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Reactu.io - All Rights Reserved</p>
+        </footer>
     </div>
 
+    <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize particles.js
             particlesJS('particles-js', {
                 particles: {
                     number: { value: 80, density: { enable: true, value_area: 800 } },
@@ -315,7 +675,49 @@
                 },
                 retina_detect: true
             });
+            
+            // Scroll animation
+            const fadeElements = document.querySelectorAll('.fade-in-up');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Event tracking function for analytics
+            function trackEvent(category, action, label) {
+                if (window.gtag) {
+                    gtag('event', action, {
+                        'event_category': category,
+                        'event_label': label
+                    });
+                }
+            }
+            
+            // Track CTA clicks
+            document.querySelector('.cta').addEventListener('click', function() {
+                trackEvent('engagement', 'click', 'linkedin_follow');
+            });
         });
     </script>
+    
+    <!-- Google Analytics (commented out until you're ready to implement) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
 </body>
 </html>
